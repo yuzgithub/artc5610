@@ -215,7 +215,7 @@ module.exports = function (app,models) {
             var destination = myFile.destination;var size = myFile.size;var mimetype = myFile.mimetype;
             widgetModel
                 .findWidgetById(widgetId)
-                .then(function(widget) {widget.url = "/uploads/" + filename + "." + mimetype;
+                .then(function(widget) {widget.url = "/uploads/" + filename;
                         return widgetModel
                             .updateWidget(widgetId, widget)},
                     function(error) {res.status(404).send(error);}

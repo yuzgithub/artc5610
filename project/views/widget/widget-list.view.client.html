@@ -56,7 +56,7 @@
                 </div>
             <!--//render different widget types in diffrent modules.-->
             <div ng-switch-when="HTML"><div ng-bind-html="model.getSafeHtml(widget)"></div></div>
-            <!--<div ng-switch-when="IMAGE">{{widget}}<img ng-src="..{{widget.url}}" width="{{widget.width}}"/></div>-->
+            <div ng-switch-when="IMAGE"><img ng-src="{{widget.url}}" width="{{widget.width}}"/></div>
             <!--<div ng-switch-when="IMAGE">{{widget}}<img src="..{{widget.url}}" width="{{widget.width}}"/></div>-->
             <div ng-switch-when="YOUTUBE" class="youtube-widget"><iframe width="{{widget.width}}" ng-src="{{model.getSafeUrl(widget)}}" frameborder="0" allowfullscreen></iframe></div>
             <div ng-switch-when="TEXT">
